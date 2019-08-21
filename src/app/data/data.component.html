@@ -1,0 +1,24 @@
+
+
+     <div class="active-cyan-3 active-cyan-4 mb-4" style="margin-left: 70%">
+        <input [(ngModel)] = 'searchitem' (input) = "search()" style="width: 200px; margin-top: 40px" class="form-control" type="text" placeholder="Search" aria-label="Search">
+     </div>
+ <div class="container">
+    <table class="table table-striped" style="float: left">
+                <a (click) = 'new()'><button type="button" class="btn btn-success" style="margin-bottom: 8px">Add New</button></a>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th style="color: red">Delete</th>
+            <th style="color: darkorange">Edit</th>
+        </tr>
+        <tr *ngFor = 'let person of list'>
+            <td>{{person.id}}</td>
+            <td>{{person.firstname}}</td>
+            <td>{{person.lastname}}</td>
+            <td><button  type="button" class="btn btn-danger" style="width: 60px; height: 30px; padding: 0px" (click)="delete (person.id)">Remove</button></td>
+            <td><button type="button" class="btn btn-warning" style="width: 60px; height: 30px; padding: 0px" (click)="edit (person)">Edit</button></td>
+        </tr>
+    </table>
+</div>
