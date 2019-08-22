@@ -1,7 +1,7 @@
 
 
      <div class="active-cyan-3 active-cyan-4 mb-4" style="margin-left: 70%">
-        <input [(ngModel)] = 'searchitem' (input) = "search()" style="width: 200px; margin-top: 40px" class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <input [(ngModel)] = 'searchitem' style="width: 200px; margin-top: 40px" class="form-control" type="text" placeholder="Search" aria-label="Search">
      </div>
  <div class="container">
     <table class="table table-striped" style="float: left">
@@ -13,7 +13,7 @@
             <th style="color: red">Delete</th>
             <th style="color: darkorange">Edit</th>
         </tr>
-        <tr *ngFor = 'let person of list'>
+        <tr *ngFor = 'let person of list | searchbox: searchitem'>
             <td>{{person.id}}</td>
             <td>{{person.firstname}}</td>
             <td>{{person.lastname}}</td>

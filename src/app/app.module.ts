@@ -11,6 +11,7 @@ import { DataComponent } from './data/data.component';
 import { HomeComponent } from './home/home.component';
 import { DatabaseComponent } from './database/database.component';
 import { ChildComponent } from './child/child.component';
+import { SearchboxPipe } from './searchbox.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ChildComponent } from './child/child.component';
     DataComponent,
     HomeComponent,
     DatabaseComponent,
-    ChildComponent
+    ChildComponent,
+    SearchboxPipe
   ],
   imports: [
     BrowserModule,
